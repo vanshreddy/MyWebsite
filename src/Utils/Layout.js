@@ -29,6 +29,10 @@ export default function Layout({children,camera=null, ...props}){
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <pointLight position={[-10, -10, -10]} />
 
+    <Html>
+        <BackButton></BackButton>
+    </Html>
+
     <Center>
     <mesh>
     <mesh position={[0,-13,0]}>

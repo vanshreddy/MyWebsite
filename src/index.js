@@ -17,9 +17,11 @@ import 'react-toastify/dist/ReactToastify.css';
 function Overlay() {
   useEffect(() => {
     console.log("Hello");
-    if(isMobile){
-    
-    toast.info('Using Landscape mode for best Mobile experience', {
+    var myScreenOrientation = window.screen.orientation;
+    console.log(myScreenOrientation)
+    if(isMobile && myScreenOrientation.type != 'landscape-primary'){
+     
+    toast.info('Use Landscape mode for best Mobile experience', {
       position: "top-center",
       autoClose: 7000,
       hideProgressBar: false,
