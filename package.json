@@ -2,7 +2,7 @@
   "name": "website2.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vanshreddy.github.io/MyWebsite",
+  "homepage": "https://vanshreddy.tech",
   "dependencies": {
     "@react-three/drei": "^9.7.1",
     "@react-three/fiber": "^8.0.13",
