@@ -8,6 +8,8 @@ import Lights from "../Utils/Lights";
 import Planet from "../Utils/Planet";
 import {useNavigate } from 'react-router-dom';
 import {Center,Stars,Html} from '@react-three/drei';
+import { ToastContainer, toast } from 'react-toastify';
+import {isMobile} from 'react-device-detect';
 
 
 
@@ -85,11 +87,19 @@ export default function LandingPage() {
   useEffect(() => {
     const width = window.innerWidth
     const height = window.innerHeight
-   setview(width/height)
-
-
-
-   console.log("hello",height/width)
+    
+    if(!isMobile){
+    toast('Welcome To My "Space" ', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+    }
+    
   },[])
 
 

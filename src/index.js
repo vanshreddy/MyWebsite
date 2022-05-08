@@ -19,7 +19,7 @@ function Overlay() {
     console.log("Hello");
     if(isMobile){
     
-    toast.info('Use Landscape mode for best Mobile experience', {
+    toast.info('Using Landscape mode for best Mobile experience', {
       position: "top-center",
       autoClose: 7000,
       hideProgressBar: false,
@@ -28,9 +28,21 @@ function Overlay() {
       draggable: true,
       progress: undefined,
       });
-    }
+      var myScreenOrientation = window.screen.orientation;
+      myScreenOrientation.lock("landscape");
 
+
+
+    } 
+    
   },[])
+
+  var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = mm + '/' + dd + '/' + yyyy;
+
 
   const style_bad = { position: 'absolute', top: 40, left: 40, fontSize: '13px',color:"white"}
   return (
@@ -45,7 +57,7 @@ function Overlay() {
       </div> */}
       <div className={styles.flux}>Vansh Reddy</div>
       <div style={{ position: 'absolute', bottom: 20, right: 0, fontSize: '13px', color:"white"
-    }}>25/02/2022</div>
+    }}>{today}</div>
     <ToastContainer
 position="top-center"
 autoClose={5000}
@@ -62,9 +74,12 @@ pauseOnHover
 }
 
 const rootElement = document.getElementById("root");
-render(
+render(   
+<>
   <BrowserRouter>
-    <App /> <Overlay></Overlay>
-  </BrowserRouter>,
+  <Overlay></Overlay>
+    <App />
+  </BrowserRouter>
+  </>,
   rootElement
 );

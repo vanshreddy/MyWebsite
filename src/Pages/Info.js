@@ -16,9 +16,6 @@ export default function Info() {
     
     return (
         <>
-        <div className='test5'>
-            <BackButton></BackButton>
-        </div>
         <Layout color='#e36e4b'>
         <Html center>
         
