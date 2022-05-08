@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/MyWebsite/static/css/main.11714523.css",
+    "main.js": "/MyWebsite/static/js/main.a755b0df.js",
+    "static/media/VanshReddy_MainResume.jpg": "/MyWebsite/static/media/VanshReddy_MainResume.07da6b49c76a05f4f532.jpg",
+    "static/media/rl.jpg": "/MyWebsite/static/media/rl.6da1af05fac1c3a80e47.jpg",
+    "static/media/twenty.png": "/MyWebsite/static/media/twenty.c053968586703d7c7b4d.png",
+    "static/media/c.png": "/MyWebsite/static/media/c.52cac406d9bc125ec8bc.png",
+    "static/media/yt.png": "/MyWebsite/static/media/yt.9737e184f41bcfb377ec.png",
+    "index.html": "/MyWebsite/index.html",
+    "main.11714523.css.map": "/MyWebsite/static/css/main.11714523.css.map",
+    "main.a755b0df.js.map": "/MyWebsite/static/js/main.a755b0df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11714523.css",
+    "static/js/main.a755b0df.js"
+  ]
+}
