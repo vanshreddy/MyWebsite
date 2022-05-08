@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Suspense} from "react";
+import LandingPage from "./Pages/LandingPage";
+import Projects from "./Pages/Projects";
+import Experience from "./Pages/Experience";
+import { Routes,Route } from "react-router-dom";
+import Invalidpage from "./Pages/Invalidpage";
+import Resume from "./Pages/Resume";
+import 'bootstrap/dist/css/bootstrap.css';
 
-function App() {
+
+import Info from "./Pages/Info";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<LandingPage />} />
+      <Route exact path="/About" element={<Info />} />
+      <Route exact path="/Resume" element={<Resume/>} />
+      <Route  path="/Projects" element={<Projects />} />
+      <Route  path="*" element={<Invalidpage />} />
+    </Routes>
+    
   );
 }
-
-export default App;
