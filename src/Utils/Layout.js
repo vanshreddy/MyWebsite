@@ -2,10 +2,11 @@ import {Center,Stars,Html} from '@react-three/drei';
 import { Canvas,useThree,useFrame} from "@react-three/fiber";
 import {useState,useRef} from "react";
 import BackButton from "./Back";
-
+import {useNavigate} from 'react-router-dom'
 
 function RotatingStars() {
     const eref = useRef()
+    
 
     useFrame((state,delta)=> {
         eref.current.rotation.x -= delta / 10
@@ -21,6 +22,14 @@ function RotatingStars() {
 
 
 export default function Layout({children,camera=null, ...props}){
+    const navigate = useNavigate();
+
+    function HandleClick(){
+        console.log("Clicked")
+        navigate('/');
+
+    }
+
 
     return(
            
@@ -29,8 +38,8 @@ export default function Layout({children,camera=null, ...props}){
     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
     <pointLight position={[-10, -10, -10]} />
 
-    <Html>
-        <BackButton></BackButton>
+    <Html position={[7.35,3.75,0]}>
+        <BackButton redirect={HandleClick}></BackButton>
     </Html>
 
     <Center>
